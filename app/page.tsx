@@ -18,10 +18,10 @@ const Home = () => {
       callbackUrl: "/",
     });
   };
-const test = (e) => {
-  e.preventDefault()
-  router.push("/dashboard")
-}
+// const test = (e) => {
+//   e.preventDefault()
+//   router.push("/dashboard")
+// }
   return (
     <div className="grid place-items-center h-screen">
       HomePage
