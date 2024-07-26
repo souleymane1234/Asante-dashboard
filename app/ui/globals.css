@@ -6,7 +6,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg: #151c2c;
+  --bgSoft: #182237;
+  --text: white;
+  --testSoft: #b7bac1;
 }
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+ }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -15,19 +25,23 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+@layer base {
+  body {
+    @apply bg-gray-500;
+  }
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--test);
+  /* background: #4ABBEC; */
+  background-color: var(--bg);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+a{
+  color: inherit;
+  text-decoration: none;
 }
